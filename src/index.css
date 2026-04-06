@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+@theme {
+  --font-tajawal: "Tajawal", sans-serif;
+  --color-navy-dark: #0F172A;
+  --color-navy-light: #1E3A5F;
+}
+
+body {
+  font-family: var(--font-tajawal);
+  background-color: var(--color-navy-dark);
+  direction: rtl;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-navy-light) 100%);
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, #6366F1, #8B5CF6);
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes dots {
+  0%, 20% { content: "."; }
+  40% { content: ".."; }
+  60% { content: "..."; }
+  80%, 100% { content: ""; }
+}
+
+.loading-dots::after {
+  content: ".";
+  animation: dots 1.5s infinite;
+}
